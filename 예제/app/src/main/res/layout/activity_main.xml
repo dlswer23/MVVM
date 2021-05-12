@@ -20,5 +20,18 @@
                 android:layout_height="wrap_content"
                 android:text="@{model.helloText}"
                 tools:text="Hello World!"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{()-> model.showCurrentTime()}"
+                android:text="current time1"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{model.currentTime2ClickListener}"
+                android:text="current time2"/>
+
         </LinearLayout>
     </layout>

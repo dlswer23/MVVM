@@ -1,5 +1,7 @@
 package com.example.firstmvvm;
 
+import android.view.View;
+
 import androidx.databinding.ObservableField;
 
 public class MainViewModel implements BaseViewModel{
@@ -18,5 +20,16 @@ public class MainViewModel implements BaseViewModel{
 
     @Override
     public void onDestroy() {}
+
+    public void showCurrentTime(){
+        helloText.set(String.valueOf(System.currentTimeMillis()));
+    }
+
+    public View.OnClickListener currentTime2ClickListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            showCurrentTime();
+        }
+    };
 
 }
